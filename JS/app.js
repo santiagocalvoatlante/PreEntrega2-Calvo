@@ -1,4 +1,4 @@
-let cantSimple = 0;
+/* let cantSimple = 0;
 let cantDoble = 0;
 let cantTwin = 0;
 let cantKing = 0;
@@ -97,6 +97,26 @@ function calculaTotalReserva() {
 }
 
 calculaTotalReserva();
+ */
+function computeTotal() {
+    var checkin = new Date(document.getElementById("checkinDate").value)
+    var checkout = new Date(document.getElementById('checkoutDate').value)
+
+    var duracion = (checkout - checkin) / (24 * 60 * 60 * 1000)
+
+
+    var precio = 0
+    if (document.getElementById('simple').checked == true)
+        precio += 15000.00
+    if (document.getElementById('doble').checked == true)
+        precio += 20000.00
+    if (document.getElementById('twin').checked == true)
+        precio += 18000.00
+
+    alert("El total de su reserva es $" + precio * duracion)
+}
+
+
 
 
 
