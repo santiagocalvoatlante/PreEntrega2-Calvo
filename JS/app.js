@@ -1,140 +1,4 @@
-/* let cantSimple = 0;
-let cantDoble = 0;
-let cantTwin = 0;
-let cantKing = 0;
-let cantFamiliar = 0;
-
-let precioSimple = 15000;
-let precioDoble = 20000;
-let precioTwin = 18000;
-let precioKing = 25000;
-let precioFamiliar = 25000;
-
-let totalReserva = 0;
-
-let disponiblesSimple = 10;
-let disponiblesDoble = 10;
-let disponiblesTwin = 10;
-let disponiblesKing = 10;
-let disponiblesFamiliar = 10;
-
-
-function eligeTipoHabitacion(tipo) {
-    let cantidad = -1;
-    switch (tipo) {
-        case "1":
-           
-            cantidad = parseInt (prompt("Ingrese la cantidad de habitaciones 'simples' que desea."));
-            if (cantidad <= disponiblesSimple) {
-                disponiblesSimple = disponiblesSimple - cantidad;
-                cantSimple = cantidad + cantSimple;
-                totalReserva += precioSimple * cantidad;
-            }
-            else {
-                alert("Solo hay " + disponiblesSimple + " habitaciones simples displonibles este momento")
-            }
-            break;
-        case "2":
-
-            cantidad = parseInt (prompt("Ingrese la cantidad de habitaciones 'doble' que desea."));
-            if (cantidad <= disponiblesDoble) {
-                disponiblesDoble = disponiblesDoble - cantidad;
-                cantDoble += cantidad;
-                totalReserva += precioDoble * cantidad;
-            } else {
-                alert("Solo hay " + disponiblesDoble + " habitaciones doble displonibles este momento")
-            }
-
-            break;
-        case "3":
-
-            cantidad = parseInt (prompt("Ingrese la cantidad de habitaciones 'twin' que desea."));
-            if (cantidad <= disponiblesTwin) {
-                disponiblesTwin = disponiblesTwin - cantidad;
-                cantTwin += cantidad;
-                totalReserva += precioTwin * cantidad;
-            }
-            else {
-                alert("Solo hay " + disponiblesTwin + " habitaciones twin displonibles este momento")
-            }
-            break;
-
-        case "4":
-            cantidad = parseInt (prompt("Ingrese la cantidad de habitaciones 'king' que desea."));
-            if (cantidad <= disponiblesKing) {
-                disponiblesKing = disponiblesKing - cantidad;
-                cantKing += cantidad;
-                totalReserva += precioKing * cantidad;
-            }
-            else {
-                alert("Solo hay " + disponiblesKing + " habitaciones King displonibles este momento")
-            }
-            break;
-        case "5":
-            cantidad = parseInt (prompt("Ingrese la cantidad de habitaciones 'familiar' que desea."));
-            if (cantidad <= disponiblesFamiliar) {
-                disponiblesFamiliar -= cantidad;
-                cantFamiliar += cantidad;
-                totalReserva += precioFamiliar * cantidad;
-            }
-            else {
-                alert("Solo hay " + disponiblesFamiliar + " habitaciones familiar displonibles este momento")
-            }
-            break;
-        default:
-            alert("Opción no valida");
-            break;
-    }
-}
-
-function calculaTotalReserva() {
-    let tipo = prompt("Ingrese la habitación que desea: \n 1 - Simple ------------------ $" + precioSimple + "\n 2 - Doble --------------- $" + precioDoble + " \n 3 - Twin --------------- $" + precioTwin + "\n 4 - King -------------- $" + precioKing + " \n 5 - Familiar -------- $" + precioFamiliar + " \n 0 - Finalizar");
-    while (tipo != "0") {
-        eligeTipoHabitacion(tipo);
-        tipo = prompt("Ingrese la habitación que desea: \n 1 - Simple ------------------ $" + precioSimple + "\n 2 - Doble --------------- $" + precioDoble + " \n 3 - Twin --------------- $" + precioTwin + "\n 4 - King -------------- $" + precioKing + " \n 5 - Familiar -------- $" + precioFamiliar + " \n 0 - Finalizar \n\n Total de su compra: $" + totalReserva);
-    }
-    alert("El total de su reserva es: $" + totalReserva + " \nHabitaciones ingresadas: \n Simple: " + cantSimple + "\n Doble: " + cantDoble + "\n Twin: " + cantTwin + "\n King: " + cantKing + "\n Familiar: " + cantFamiliar + "\n\nDisfrute de su estadia!");
-}
-
-calculaTotalReserva();
- */
-
-/* <!--variables--> */
-
-
-
-
-/* <!--Reservas--> */
-
-/* function computeTotal() {
-    var checkin = new Date(document.getElementById("checkinDate").value)
-    var checkout = new Date(document.getElementById('checkoutDate').value)
-
-    var duracion = (checkout - checkin) / (24 * 60 * 60 * 1000)
-
-
-    var precio = 0
-    if (document.getElementById('simple').checked == true)
-        precio += 15000.00
-    if (document.getElementById('doble').checked == true)
-        precio += 20000.00
-    if (document.getElementById('twin').checked == true)
-        precio += 18000.00
-
-    alert("El total de su reserva es $" + precio * duracion)
-} */
-
-/* class habitacionesElegido {
-    constructor(tipo, caracteristica, precio, total = 0, cant = 0) {
-        this.tipo = tipo;
-        this.caracteristica = caracteristica;
-        this.precio = precio;
-        this.total = total;
-        this.cant = cant;
-    }
-}
- */
-
+/* 
 class habitacion {
     constructor(tipo, caracteristica, precio, cant = 0, disponibilidad) {
         this.tipo = tipo;
@@ -255,4 +119,72 @@ function buscahabitacion(habitacionesDisponibles, habitacionBuscada) {
 }
 
 eligeOpcion();
+ */
 
+// Reserva
+function a() {
+    var ae = 0
+    let nombre; 
+
+    if (document.getElementById("1").checked) {
+        nombre = document.getElementById("Habitacion_Simple").textContent;
+        ae += 100.99 
+        console.log(document.getElementById("Habitacion_Simple").textContent);
+    }
+    if (document.getElementById("2").checked){
+        nombre = document.getElementById("Habitacion_Doble").textContent;
+        ae += 150.99
+    }
+    if (document.getElementById("3").checked){
+        nombre = document.getElementById("Habitacion_Familiar").textContent;
+        ae += 200.99
+    }
+
+
+    if (ae >= 1000)
+        ae = ae / 18 * 17
+
+    if (ae >= 500)
+        ae = ae * 0.9
+
+    var p = new Date(document.getElementById("c1").value)
+    var p2 = new Date(document.getElementById("c2").value)
+    var days = (p2 - p) / (1000 * 60 * 60 * 24)
+    alert("Su estadia es por " + days + " dias.")
+    alert("El total de la reserva es $" + ae * days)
+
+    leeDatosReserva(nombre);
+
+}
+
+document.getElementById("botonReserva").addEventListener("click", a);
+
+function guardarReservaLocalStorage(reserva) {
+    let reservaLS;
+    reservaLS = obtenerReservasLocalStorage();
+    //El curso seleccionado se agrega al Array
+    reservaLS.push(reserva);
+    localStorage.setItem('reserva', JSON.stringify(reservaLS));
+}
+
+//comprobar que hayan elementos en el LS
+function obtenerReservasLocalStorage() {
+    let reservaLS;
+    //comprobamos si no hay naad o es nulo, creamos el array vacío
+    if (localStorage.getItem('reserva') === null) {
+        reservaLS = [];
+    } else {
+        reservaLS = JSON.parse(localStorage.getItem('reserva'));
+    }
+    return reservaLS;
+}
+function leeDatosReserva(nombre) {
+    const infoReserva = {
+
+        nombre: nombre,
+
+
+    }
+
+    guardarReservaLocalStorage(infoReserva);
+}
