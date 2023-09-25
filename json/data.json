@@ -1,0 +1,29 @@
+{
+    "habitaciones": [
+        {
+            "id":1,
+            "nombre": "Habitacion Simple",
+            "id_nombre": "Habitacion_Simple",
+            "precio": 100.99,
+            "imagen": "./imagenes/habsimple1.jpg"
+           
+        },
+        {
+            "id":2,
+            "nombre": "Habitacion Doble",
+            "id_nombre": "Habitacion_Doble",
+            "precio": 150.99,
+            "imagen": "./imagenes/habdoble.jpg"
+           
+        },
+        {
+            "id":3,
+            "nombre": "Habitacion Familiar",
+            "id_nombre": "Habitacion_Familiar",
+            "precio": 200.99,
+            "imagen": "./imagenes/habgrande.jpg"
+            
+        }
+    ]
+}        
+        
