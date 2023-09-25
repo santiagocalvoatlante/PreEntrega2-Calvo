@@ -40,6 +40,7 @@ function a() {
         nombre += document.getElementById("Habitacion_Doble").textContent;
         precio += 150.99
     }
+    
     if (document.getElementById("3").checked) {
         nombre += document.getElementById("Habitacion_Familiar").textContent;
         precio += 200.99
