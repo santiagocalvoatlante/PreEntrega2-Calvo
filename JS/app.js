@@ -1,7 +1,7 @@
 const div_habitaciones = document.getElementById("div_habitaciones");
 
 // llamado a llenar main
-fetch('../json/data.json')
+fetch('https://raw.githubusercontent.com/santiagocalvoatlante/Simulador-Reserva-Calvo/main/json/data.json')
     .then((resp) => resp.json())
     .then((data) => {
         const { habitaciones } = data;
